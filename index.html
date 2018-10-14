@@ -1,27 +1,56 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link href="css/background.css" rel="stylesheet" />
-        <link href="css/title.css" rel="stylesheet" />
-        <link href="css/page.css" rel="stylesheet" />
-        <link href="css/fonts.css" rel="stylesheet" />
+        <link href="css/background.css" rel="stylesheet" type="text/css" />
+        <link href="css/title.css" rel="stylesheet" type="text/css" />
+        <link href="css/page.css" rel="stylesheet" type="text/css" />
+        <link href="css/fonts.css" rel="stylesheet" type="text/css" />
+        <link href="css/description.css" rel="stylesheet" type="text/css" />
+        
+        <script src="js/granim.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/arrow.js"></script>
         
         <title>Merlin</title>
     </head>
     <body>
+        <canvas id="canvas-basic"></canvas>
+        <script>
+            var granimInstance = new Granim({
+                element: '#canvas-basic',
+                name: 'basic-gradient',
+                direction: 'diagonal', // 'diagonal', 'top-bottom', 'radial'
+                opacity: [1, 1],
+                isPausedWhenNotInView: true,
+                states : {
+                    "default-state": {
+                        gradients: [
+                            ['#00c67f', '#7700c1'],
+                            ['#c0c700', '#0a96c0'],
+                            ['#00a658', '#c01f66'],
+                            ['#4bc7bc', '#9f0b00'],
+                            ['#1d6b63', '#d19c05']
+                        ]
+                    }
+                }
+            });
+        </script>
+        
         <div class="page" id="home">
             <div class="title">
                 <img src="img/logo-elephant_fill_white_transparent.png" alt="Merlin Logo" title="Merlin" />
                 <span>merlin</span>
             </div>
+            <img class="arrow_down" src="img/arrow.png" alt="Arrow Down" title="Description" />
         </div>
         <div class="page" id="description">
+            <img class="arrow_up" src="img/arrow.png" alt="Arrow Up" title="Home" />
             <div class="title">
                 <img src="img/logo-elephant_fill_white_transparent.png" alt="Merlin Logo" title="Merlin" />
-                <span>merlin</span>
+                <span>wassup</span>
             </div>
         </div>
     </body>
