@@ -1,0 +1,95 @@
+body {
+    background: white;
+}
+
+header {
+    width: 100%;
+}
+
+header .logo {
+    height: 90px;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: invert(1);
+}
+
+header .menu {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+header .menu a {
+    color: black;
+    text-decoration: none;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 24px;
+    font-family: "Lane", monospace;
+    letter-spacing: 1px;
+    padding: 5px 8px;
+    border-bottom: solid 1px transparent;
+    border-top: solid 1px transparent;
+    transition: 0.1s ease-out all;
+}
+
+header .menu a:hover {
+    border-bottom-color: black;
+    border-top-color: black;
+}
+
+header .menu a span {
+    border-bottom: solid 1px transparent;
+    border-top: solid 1px transparent;
+    transition: 0.1s ease-out all;
+}
+
+@media only screen and (max-width: 525px) {
+    header .menu a:hover {
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+    }
+
+    header .menu a span:hover {
+        border-bottom-color: black;
+        border-top-color: black;
+    }
+
+    header .menu a {
+        letter-spacing: 0;
+        font-size: 0;
+    }
+
+    header .menu a span {
+        font-size: 24px;
+    }
+}
+
+header .menu::before {
+    content: "";
+    width: 250px;
+    height: 1px;
+    background: black;
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .menu::after {
+    content: "";
+    width: 150px;
+    height: 1px;
+    background: black;
+    display: block;
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
