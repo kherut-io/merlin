@@ -12,8 +12,6 @@ body {
     padding: 0;
 
     background: black;
-
-    overflow: hidden;
 }
 
 #canvas-basic {
@@ -42,7 +40,7 @@ body {
 .container img {
     display: inline;
 
-    width: 125px;
+    height: 125px;
 }
 
 .container h1 {
@@ -91,6 +89,14 @@ body {
     height: 100%;
 
     position: absolute;
+
+    opacity: 1;
+
+    transition: 0.25s ease-out all;
+}
+
+.page.invisible {
+    opacity: 0;
 }
 
 .page * {
