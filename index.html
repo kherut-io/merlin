@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#232526">
 
         <link href="css/fonts.css" rel="stylesheet" type="text/css" />
         <link href="css/home.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
         
         <script src="js/granim.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -16,6 +18,28 @@
     <body>
         <canvas id="canvas-basic"></canvas>
         <script>
+            var grds = [
+                ["#24C6DC", "#514A9D"],
+                ["#283048", "#859398"],
+                ["#3D7EAA", "#FFE47A"], //
+                ["#232526", "#414345"],
+                ["#5C258D", "#4389A2"],
+                ["#134E5E", "#71B280"],
+                ["#085078", "#85D8CE"],
+                ["#4776E6", "#8E54E9"],
+                ["#614385", "#516395"],
+                ["#1F1C2C", "#928DAB"],
+                ["#16222A", "#3A6073"]
+            ];
+    
+            /*var grds = [
+                ['#00c67f', '#7700c1'],
+                ['#c0c700', '#0a96c0'],
+                ['#00a658', '#c01f66'],
+                ['#4bc7bc', '#9f0b00'],
+                ['#1d6b63', '#d19c05']
+            ];*/
+
             var granimInstance = new Granim({
                 element: '#canvas-basic',
                 name: 'basic-gradient',
@@ -24,18 +48,20 @@
                 isPausedWhenNotInView: true,
                 states : {
                     "default-state": {
-                        gradients: [
-                            ['#00c67f', '#7700c1'],
-                            ['#c0c700', '#0a96c0'],
-                            ['#00a658', '#c01f66'],
-                            ['#4bc7bc', '#9f0b00'],
-                            ['#1d6b63', '#d19c05']
-                        ]
+                        gradients: grds
                     }
                 }
             });
         </script>
         
+        <ul class="menu">
+            <li data-id="home"></li>
+            <li data-id="overview"></li>
+            <li data-id="video"></li>
+            <li data-id="documentation"></li>
+            <li data-id="store"></li>
+        </ul>
+
         <div class="page" id="home">
             <div class="container">
                 <a href="https://kherut-io.github.io/"><img src="img/kherutxmerlin.png" alt="Merlin Logo" title="Kherut.io x Merlin" /></a>

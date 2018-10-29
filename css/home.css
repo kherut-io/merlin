@@ -73,7 +73,7 @@ body {
     border: solid 1px white;
     border-radius: 30px;
     background: transparent;
-    transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in-out;
     white-space: nowrap;
 }
 
@@ -92,7 +92,7 @@ body {
 
     opacity: 1;
 
-    transition: 0.25s ease-out all;
+    transition: 0.25s ease-in-out all;
 }
 
 .page.invisible {
@@ -188,4 +188,35 @@ body {
     .page#overview .container .text h1 {
         display: none;
     }
+}
+
+.menu {
+    position: fixed;
+    right: 20px;
+    top: calc(50% - 10px);
+    transform: translateY(-50%);
+    z-index: 99;
+}
+
+.menu li {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    opacity: 0.5;
+    transition: 0.15s all ease-in-out;
+    cursor: pointer;
+}
+
+.menu li.active {
+    border-radius: 0%;
+    opacity: 1;
+}
+
+.menu li:hover {
+    opacity: 1;
 }
